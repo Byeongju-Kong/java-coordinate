@@ -7,7 +7,7 @@ public class InputDTO {
 
     public String[] splitTwoPoints(final String input) {
         validateInputForm(input);
-        return input.split(DELIMITER);
+        return removeBracket(input).split(DELIMITER);
     }
 
     private void validateInputForm(final String input) {
@@ -17,6 +17,14 @@ public class InputDTO {
         if (hasWrongBracketPosition(input)) {
             throw new IllegalArgumentException("점들을 담는 괄호가 잘못되었습니다.");
         }
+    }
+
+    private String removeBracket(String input) {
+        for (int index = 0; index < 2; index++) {
+            input = input.replace("(", "");
+            input = input.replace(")", "");
+        }
+        return input;
     }
 
     private boolean hasWrongBracketPosition(final String input) {

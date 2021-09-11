@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
 class InputDTOTest {
@@ -24,5 +25,14 @@ class InputDTOTest {
         InputDTO inputDTO = new InputDTO();
         assertThatIllegalArgumentException().isThrownBy(() -> inputDTO.splitTwoPoints(wrongInput))
                 .withMessage("점들을 담는 괄호가 잘못되었습니다.");
+    }
+
+    @Test
+    @DisplayName("두 점에 대한 문자열을 받아 괄호들을 삭제하고 구분자(-)를 기준으로 두 점을 나누어 반환한다.")
+    void splitTwoPoints() {
+        InputDTO inputDTO = new InputDTO();
+        String[] actual = inputDTO.splitTwoPoints("(1,2)-(3,4)");
+        String[] expect = new String[]{"1,2", "3,4"};
+        assertThat(actual).isEqualTo(expect);
     }
 }
