@@ -1,4 +1,6 @@
-package model.point;
+package model;
+
+import model.point.Point;
 
 public class Line {
     private final Point firstPoint;

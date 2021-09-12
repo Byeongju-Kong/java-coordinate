@@ -1,4 +1,4 @@
-package model.point;
+package model;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
