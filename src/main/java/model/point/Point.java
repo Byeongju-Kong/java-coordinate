@@ -42,4 +42,12 @@ public class Point {
     public Integer getYDifference(final Point another) {
         return y.getDifference(another.y);
     }
+
+    public Integer getX() {
+        return x.getValue();
+    }
+
+    public Integer getY() {
+        return y.getValue();
+    }
 }
