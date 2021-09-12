@@ -28,4 +28,8 @@ public class Number {
     public Integer getDifference(final Number another) {
         return value - another.value;
     }
+
+    public Integer getValue() {
+        return value;
+    }
 }
