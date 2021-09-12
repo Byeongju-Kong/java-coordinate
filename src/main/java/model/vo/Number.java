@@ -25,7 +25,7 @@ public class Number {
         }
     }
 
-    public Integer getDifference(Number another) {
+    public Integer getDifference(final Number another) {
         return value - another.value;
     }
 }

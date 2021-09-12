@@ -35,11 +35,11 @@ public class Point {
         }
     }
 
-    public Integer getXDifference(Point another) {
+    public Integer getXDifference(final Point another) {
         return x.getDifference(another.x);
     }
 
-    public Integer getYDifference(Point another) {
+    public Integer getYDifference(final Point another) {
         return y.getDifference(another.y);
     }
 }
