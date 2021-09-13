@@ -10,13 +10,13 @@ public class Number {
         this.value = Integer.parseInt(value);
     }
 
-    public static Number generate(final String value) {
+    public static Number generate(final String value) throws IllegalArgumentException {
         validateNumber(value);
         return new Number(value);
     }
 
-    private static void validateNumber(final String value) {
-        if(!value.matches(NUMBER_REGEX)) {
+    private static void validateNumber(final String value) throws IllegalArgumentException {
+        if (!value.matches(NUMBER_REGEX)) {
             throw new IllegalArgumentException("좌표 값에 숫자가 아닌 입력 혹은 음수 입력이 있습니다.");
         }
         int number = Integer.parseInt(value);
