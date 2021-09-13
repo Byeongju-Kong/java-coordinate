@@ -2,6 +2,9 @@ package model;
 
 import model.point.Point;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Line {
     private final Point firstPoint;
     private final Point secondPoint;
@@ -18,5 +21,9 @@ public class Line {
     public double getLength() {
         return Math.sqrt(Math.pow(firstPoint.getXDifference(secondPoint), 2)
                 + Math.pow(firstPoint.getYDifference(secondPoint), 2));
+    }
+
+    public List<Point> getPoints() {
+        return Arrays.asList(firstPoint, secondPoint);
     }
 }
