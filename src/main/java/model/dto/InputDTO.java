@@ -5,12 +5,12 @@ public class InputDTO {
     private static final char LEFT_BRACKET = '(';
     private static final char RIGHT_BRACKET = ')';
 
-    public String[] splitTwoPoints(final String input) {
+    public String[] splitTwoPoints(final String input) throws IllegalArgumentException {
         validateInputForm(input);
         return removeBracket(input).split(DELIMITER);
     }
 
-    private void validateInputForm(final String input) {
+    private void validateInputForm(final String input) throws IllegalArgumentException {
         if (!input.contains("-")) {
             throw new IllegalArgumentException("두 점을 구분자( - )로 구분해야합니다.");
         }

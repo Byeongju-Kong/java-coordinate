@@ -18,12 +18,21 @@ class NumberTest {
     }
 
     @Test
-    @DisplayName("좌표 값을 반환한다.")
-    void getValue() {
+    @DisplayName("Number를 받아 두 값의 차를 반환한다.")
+    void getDifference() {
         Number firstNumber = Number.generate("10");
         Number secondNumber = Number.generate("8");
         int actual = firstNumber.getDifference(secondNumber);
         int expect = 2;
+        assertThat(actual).isEqualTo(expect);
+    }
+
+    @Test
+    @DisplayName("필드 값을 반환한다.")
+    void getValue() {
+        Number number = Number.generate("10");
+        int actual = number.getValue();
+        int expect = 10;
         assertThat(actual).isEqualTo(expect);
     }
 }

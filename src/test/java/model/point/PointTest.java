@@ -43,4 +43,14 @@ class PointTest {
                 () -> assertThat(firstPoint.getYDifference(secondPoint)).isEqualTo(4)
         );
     }
+
+    @Test
+    @DisplayName("좌표 값을 반환한다.")
+    void getXAndY() {
+        Point point = Point.create("1,2");
+        assertAll(
+                () -> assertThat(point.getX()).isEqualTo(1),
+                () -> assertThat(point.getY()).isEqualTo(2)
+        );
+    }
 }
