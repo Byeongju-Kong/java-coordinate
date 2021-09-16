@@ -1,6 +1,6 @@
 package controller;
 
-import model.Line;
+import model.shape.Line;
 import model.dto.InputDTO;
 import view.Display;
 

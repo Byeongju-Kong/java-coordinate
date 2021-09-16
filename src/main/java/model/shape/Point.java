@@ -1,4 +1,4 @@
-package model.point;
+package model.shape;
 
 import model.vo.Number;
 

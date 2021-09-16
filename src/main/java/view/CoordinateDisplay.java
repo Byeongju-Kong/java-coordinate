@@ -1,6 +1,6 @@
 package view;
 
-import model.point.Point;
+import model.shape.Point;
 
 import java.util.List;
 
