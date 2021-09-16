@@ -1,5 +1,6 @@
 package model.point;
 
+import model.vo.Number;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -49,8 +50,8 @@ class PointTest {
     void getXAndY() {
         Point point = Point.create("1,2");
         assertAll(
-                () -> assertThat(point.getX()).isEqualTo(1),
-                () -> assertThat(point.getY()).isEqualTo(2)
+                () -> assertThat(point.getX()).isEqualTo(Number.generate("1")),
+                () -> assertThat(point.getY()).isEqualTo(Number.generate("2"))
         );
     }
 }

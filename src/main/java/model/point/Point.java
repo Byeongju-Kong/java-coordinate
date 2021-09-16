@@ -43,11 +43,11 @@ public class Point {
         return y.getDifference(another.y);
     }
 
-    public Integer getX() {
-        return x.getValue();
+    public Number getX() {
+        return x;
     }
 
-    public Integer getY() {
-        return y.getValue();
+    public Number getY() {
+        return y;
     }
 }

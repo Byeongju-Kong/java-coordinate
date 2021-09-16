@@ -28,11 +28,11 @@ public class CoordinateDisplay implements Display {
     private String drawPoint(int yIndex, List<Point> points) {
         String tripleSpace = "   ";
         String nothing = " ";
-        if (yIndex == points.get(0).getY()) {
-            return tripleSpace.repeat(points.get(0).getX()) + "*";
+        if (yIndex == points.get(0).getY().getValue()) {
+            return tripleSpace.repeat(points.get(0).getX().getValue()) + "*";
         }
-        if (yIndex == points.get(1).getY()) {
-            return tripleSpace.repeat(points.get(1).getX()) + "*";
+        if (yIndex == points.get(1).getY().getValue()) {
+            return tripleSpace.repeat(points.get(1).getX().getValue()) + "*";
         }
         return nothing;
     }
