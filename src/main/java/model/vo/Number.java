@@ -1,5 +1,7 @@
 package model.vo;
 
+import java.util.Objects;
+
 public class Number {
     private final Integer value;
     private static final Integer MIN_VALUE = 0;
@@ -31,5 +33,18 @@ public class Number {
 
     public Integer getValue() {
         return value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Number number = (Number) o;
+        return Objects.equals(value, number.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
     }
 }

@@ -31,8 +31,6 @@ class NumberTest {
     @DisplayName("필드 값을 반환한다.")
     void getValue() {
         Number number = Number.generate("10");
-        int actual = number.getValue();
-        int expect = 10;
-        assertThat(actual).isEqualTo(expect);
+        assertThat(number).isEqualTo(Number.generate("10"));
     }
 }
