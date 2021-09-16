@@ -3,9 +3,9 @@ package model.point;
 import model.vo.Number;
 
 public class Point {
+    private static final String DELIMITER = ",";
     private final Number x;
     private final Number y;
-    private static final String DELIMITER = ",";
 
     private Point(final String coordinate) throws IllegalArgumentException {
         String[] values = splitCoordinate(coordinate);

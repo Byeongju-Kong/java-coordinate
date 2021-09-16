@@ -3,10 +3,10 @@ package model.vo;
 import java.util.Objects;
 
 public class Number {
-    private final Integer value;
     private static final Integer MIN_VALUE = 0;
     private static final Integer MIX_VALUE = 24;
     private static final String NUMBER_REGEX = "^[0-9]*$";
+    private final Integer value;
 
     private Number(final String value) {
         this.value = Integer.parseInt(value);
