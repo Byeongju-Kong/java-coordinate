@@ -4,7 +4,7 @@ import model.shape.Point;
 
 import java.util.List;
 
-public interface PlaneFigures {
+public interface PlaneFigure {
     double getArea();
     List<Point> getPoints();
 }
