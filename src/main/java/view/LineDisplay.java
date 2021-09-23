@@ -4,7 +4,7 @@ import model.shape.Point;
 
 import java.util.List;
 
-public class CoordinateDisplay implements Display {
+public class LineDisplay implements Display {
     private static final String DOUBLE_SPACE = "  ";
     private static final int COORDINATE_BOUNDARY = 24;
 
