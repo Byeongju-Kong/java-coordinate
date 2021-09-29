@@ -6,7 +6,7 @@ public class Number {
     private static final Integer MIN_VALUE = 0;
     private static final Integer MIX_VALUE = 24;
     private static final String NUMBER_REGEX = "^[0-9]*$";
-    private final Integer value;
+    private final int value;
 
     private Number(final String value) {
         this.value = Integer.parseInt(value);
